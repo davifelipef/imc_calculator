@@ -1,7 +1,7 @@
 /* Config for the smallest screen: 280px */
 @media only screen and (min-width:280px) {
     body {
-        min-height: 96vh;
+        min-height: 97vh;
         overflow: auto;
         background: linear-gradient(25deg, #f88379, #FADA5E);
         padding-left: 0.5em;
