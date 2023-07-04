@@ -1,6 +1,9 @@
 window.onload = function() {
     // Get the element with id "defaultOpen" and click on it
     document.getElementById("defaultOpen").click();
+    // resets all text input fields
+    document.getElementById("weight").innerHTML = ""
+    document.getElementById("height").innerHTML = ""
 };
 
 // Function the navigation between pages
