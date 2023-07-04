@@ -33,40 +33,45 @@ function openPage(evt, linkName) {
 }
 
 function imCalc() {
-    weight = document.getElementById("weight").value;
-    height = document.getElementById("height").value;
-    resultElement = document.getElementById("result");
-    resultInfo = document.getElementById("result_info");
+    var weight = document.getElementById("weight").value;
+    var height = document.getElementById("height").value;
+    var resultElement = document.getElementById("result");
+    var resultInfo = document.getElementById("result_info");
     // IMC value calculation
     if (weight && height) {
         imc = (weight/(height*height)).toFixed(2);
         resultElement.innerHTML = imc;
     }
-    // IMC information set up
+
+    // Ideal weight calculation
+    var lowerLimit = 18.5;
+    var upperLimit = 24.99;
+    var idealLowerWeight = (lowerLimit * (height * height)).toFixed(2);
+    var idealUpperWeight = (upperLimit * (height * height)).toFixed(2);
+    
+    // IMC result display
     if (imc < 17) {
         // Too much lower than the ideal weight
-        resultInfo.innerHTML = "Muito abaixo do peso"
+        resultInfo.innerHTML = "Muito abaixo do peso. <br><br>O seu peso ideal seria entre " + idealLowerWeight + "kg e " + idealUpperWeight + "kg."
     } else if (imc >= 17 && imc <=18.49 ) {
         // Lower than the ideal weight
-        resultInfo.innerHTML = "Abaixo do peso"
+        resultInfo.innerHTML = "Abaixo do peso. <br><br>O seu peso ideal seria entre " + idealLowerWeight + "kg e " + idealUpperWeight + "kg."
     } else if (imc >= 18.5 && imc <= 24.99) {
         // Normal weight
         resultInfo.innerHTML = "Peso normal"
     } else if (imc >= 25 && imc <= 29.99) {
         // Above the ideal weight
-        resultInfo.innerHTML = "Acima do peso"
+        resultInfo.innerHTML = "Acima do peso. <br><br>O seu peso ideal seria entre " + idealLowerWeight + "kg e " + idealUpperWeight + "kg."
     } else if (imc >= 30 && imc <= 34.99) {
         // Obesity I
-        resultInfo.innerHTML = "Obesidade I"
+        resultInfo.innerHTML = "Obesidade I. <br><br>O seu peso ideal seria entre " + idealLowerWeight + "kg e " + idealUpperWeight + "kg."
     } else if (imc >= 35 && imc <= 39.99) {
         // Obesity II (severe)
-        resultInfo.innerHTML = "Obesidade II (severa)"
+        resultInfo.innerHTML = "Obesidade II (severa). <br><br>O seu peso ideal seria entre " + idealLowerWeight + "kg e " + idealUpperWeight + "kg."
     } else {
         // 40 or higher means morbid Obesity (or level III)
-        resultInfo.innerHTML = "Obesidade III (mórbida)"
+        resultInfo.innerHTML = "Obesidade III (mórbida). <br><br>O seu peso ideal seria entre " + idealLowerWeight + "kg e " + idealUpperWeight + "kg."
     }
-    console.log(weight + ", " + height);
-    console.log("IMC = " + imc);
 }
 
 function setFormat() {
