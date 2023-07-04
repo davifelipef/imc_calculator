@@ -1,6 +1,10 @@
 window.onload = function() {
     // Get the element with id "defaultOpen" and click on it
     document.getElementById("defaultOpen").click();
+    var inputFields = document.getElementsByTagName('input');
+    for (var i = 0; i < inputFields.length; i++) {
+        inputFields[i].value = '';
+    }
 };
 
 // Function the navigation between pages
