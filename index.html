@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="script.js"></script>
+    <title>Calculadora de IMC</title>
+</head>
+<body>
+    <h1 class="page_title" id="page_title">Calculadora de IMC</h1>
+    <!-- First page  -->
+    <div id="first_page" class="pagecontent">
+        <form action="" class="container" id="container">
+            <p class="info">Digite o seu peso:</p>
+            <input text class="weight" id="weight" onchange="imCalc()"></input><label class="measure"> KG</label>
+            <!-- The button that takes to the second page -->
+            <p><button class="links" onclick="openPage(event, 'second_page')" >Avançar</button></p>
+        </form>
+    </div>
+    <!-- End of the first page -->
+    <!-- Second page  -->
+    <div id="second_page" class="pagecontent">
+        <form action="" class="container" id="container">
+            <p class="info">Digite a sua altura:</p>
+            <input text class="height" id="height" oninput="setFormat()" onchange="imCalc()"></input><label class="measure"> M</label>
+            <!-- The button that takes to the second page -->
+            <p><button class="links" onclick="openPage(event, 'first_page')" id="defaultOpen">Voltar</button>
+            <button class="links" onclick="openPage(event, 'third_page')">Calcular IMC</button></p>
+        </form>
+    </div>
+    <!-- End of the second page -->
+    <!-- Third page  -->
+    <div id="third_page" class="pagecontent">
+        <form action="" class="container" id="container">
+            <p class="info">O resultado do seu IMC é:</p>
+            <p class="result" id="result">IMC não calculado.</p>
+            <p class="result_info" id="result_info"></p>
+            <!-- The button that takes to the second page -->
+            <button class="links" onclick="openPage(event, 'second_page')">Voltar</button>
+        </form>
+    </div>
+    <!-- End of the third page -->
+</body>
+</html>
