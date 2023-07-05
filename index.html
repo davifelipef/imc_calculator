@@ -12,7 +12,7 @@
     <div id="first_page" class="pagecontent">
         <form action="" class="container" id="container">
             <p class="info">Digite o seu peso:</p>
-            <input text class="weight" id="weight" onchange="imCalc()"></input><label class="measure"> KG</label>
+            <input text class="weight" id="weight" oninput="setWeightFormat()" onchange="imCalc()"></input><label class="measure"> KG</label>
             <!-- The button that takes to the second page -->
             <p><button class="links" onclick="openPage(event, 'second_page')" >Avançar</button></p>
         </form>
@@ -22,7 +22,7 @@
     <div id="second_page" class="pagecontent">
         <form action="" class="container" id="container">
             <p class="info">Digite a sua altura:</p>
-            <input text class="height" id="height" oninput="setFormat()" onchange="imCalc()"></input><label class="measure"> M</label>
+            <input text class="height" id="height" oninput="setHeightFormat()" onchange="imCalc()"></input><label class="measure"> M</label>
             <!-- The button that takes to the second page -->
             <p><button class="links" onclick="openPage(event, 'first_page')" id="defaultOpen">Voltar</button>
             <button class="links" onclick="openPage(event, 'third_page')">Calcular IMC</button></p>
