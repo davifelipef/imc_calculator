@@ -1,14 +1,14 @@
 /* Config for the smallest screen: 280px */
 @media only screen and (min-width:280px) {
     body {
-        min-height: 97vh;
+        min-height: 96vh;
         overflow: auto;
         background: linear-gradient(25deg, #f88379, #FADA5E);
         padding-left: 0.5em;
         padding-right: 0.5em;
         margin: 0;
         background-repeat: no-repeat;
-        color: #181818;
+        color: #2F4F4F;
         font-weight: bolder;
         user-select: none;
     }
@@ -41,7 +41,7 @@
     }
     .weight {
         font-size: 1.8em;
-        width: 2em;
+        width: 4em;
         margin-bottom: 8vh;
         text-align: center;
     }
@@ -63,6 +63,7 @@
     /* Bottom link configuration */
     .links {
         font-size: 1.3em;
+        color: #2F4F4F;
         overflow: hidden;
         padding-left: 0.8em;
         padding-right: 0.8em;
