@@ -74,7 +74,21 @@ function imCalc() {
     }
 }
 
-function setFormat() {
+function setWeightFormat() {
+    var input = document.getElementById('weight');
+    var value = input.value;
+
+    // Remove any non-digit characters
+    var digitsOnly = value.replace(/\D/g, '');
+
+    // Add a comma before the last two digits
+    var formattedValue = digitsOnly.replace(/^(\d+)(\d{2})$/, '$1.$2');
+
+    // Update the input value
+    input.value = formattedValue;
+}
+
+function setHeightFormat() {
     var input = document.getElementById('height');
     var value = input.value;
 
