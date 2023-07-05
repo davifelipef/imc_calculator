@@ -82,5 +82,102 @@
         transform: scale(1.3);
     }
     /* End of the bottom link configuration */
-    
+    .disclaimer {
+        font-size: 0.9em;
+        text-align: center;
+        padding-left: 2em;
+        padding-right: 2em;
+    }
+}
+
+/* Config for small screens: 320px */
+@media only screen and (min-width:320px) {
+    body {
+        min-height: 96vh;
+        overflow: auto;
+        background: linear-gradient(25deg, #f88379, #FADA5E);
+        padding-left: 0.5em;
+        padding-right: 0.5em;
+        margin: 0;
+        background-repeat: no-repeat;
+        color: #2F4F4F;
+        font-weight: bolder;
+        user-select: none;
+    }
+    /* Page title configuration */
+    .page_title {
+        padding-top: 4vh;
+        text-align: center;
+        line-height: 1.5em;
+        color: #D67732;
+    }
+    .pagecontent {
+        display: none;
+        padding: 1em 1em;
+        border-top: none;
+        animation: fadeEffect 1.5s;  
+    } 
+    @keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+    }
+    /* Container that holds all content of the page */
+    .container {
+        text-align: center; /* Centers all the content inside the container */
+        line-height: 1em;
+    }
+    .info {
+        font-size: 1.8em;
+        line-height: 1em;
+        padding-top: 2vh;
+    }
+    .weight {
+        font-size: 1.8em;
+        width: 4em;
+        margin-bottom: 8vh;
+        text-align: center;
+    }
+    .height {
+        font-size: 1.8em;
+        width: 2.9em;
+        margin-bottom: 8vh;
+        text-align: center;
+    }
+    .measure {
+        font-size: 1.4em;
+    }
+    .result, .result_info {
+        font-size: 1.8em;
+        line-height: 1.5em;
+        color: #424972;
+        margin-bottom: 8vh;
+    }
+    /* Bottom link configuration */
+    .links {
+        font-size: 1.3em;
+        color: #2F4F4F;
+        overflow: hidden;
+        padding-left: 0.8em;
+        padding-right: 0.8em;
+        border: 0;
+        background-color: transparent;
+        outline: none;
+        user-select: none;
+        -webkit-tap-highlight-color: transparent;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        transition: 0.3s ease;
+    }
+    .links:hover {
+        color: #D67732;
+        cursor: pointer;
+        transform: scale(1.3);
+    }
+    /* End of the bottom link configuration */
+    .disclaimer {
+        font-size: 0.9em;
+        text-align: center;
+        padding-left: 2em;
+        padding-right: 2em;
+    }
 }
